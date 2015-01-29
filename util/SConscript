@@ -1,0 +1,30 @@
+Import('env')
+
+bget = '#3rd-party/bget'
+env.Append(CPPPATH = bget)
+allsources = [
+  'cxx_support.cpp',
+  #'esp_printf.c',
+  'stringstream.cpp',
+  'ostream.cpp',
+  'vt100.cpp',
+  'mem.c',
+  'Heap.cpp',
+  #'vector_adapter.cpp',
+  'Base64Decoder.cpp',
+  'Sqrt.cpp',
+  'SHA1.cpp',
+  'CRC32.cpp',
+  'HMAC.cpp',
+  'AES.cpp',
+  'aes256.c',
+  'aes256_wrapper.cpp',
+  'LFSR.cpp',
+  'TEA.cpp',
+  'Base64Decoder.cpp',
+  'Base64Encoder.cpp',
+  'SineLUT.cpp'
+]
+
+sources = allsources
+env.lib_util = env.Library('util', sources)
