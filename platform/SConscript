@@ -1,0 +1,26 @@
+Import('env')
+
+allsources = [
+  'HAL_ADC.cpp',
+  'HAL_AudioPlayer.cpp',
+  'HAL_AudioSource.cpp',
+  'HAL_DAC.cpp',
+  'HAL_Driver.cpp',
+  'HAL_GPIO.cpp',
+  'HAL_HMC6352.cpp',
+  'HAL_I2C.cpp',
+  'HAL_IAP.cpp',
+  'HAL_Flash.cpp',
+  'HAL_InterruptHandler.cpp',
+  'HAL_LIS3LV02DQ.cpp',
+  'HAL_PWM.cpp',
+  'HAL_PinSelect.cpp',
+  'HAL_Processor.cpp',
+  'HAL_SCB.cpp',
+  'HAL_Serial.cpp',
+  'HAL_Timer.cpp',
+  'HAL_VIC.cpp',
+  'DefaultInterrupt_Handler.cpp'
+]
+sources = Glob('*.c') + Glob('*.cpp')
+env.lib_platform = env.Library('platform', sources)
