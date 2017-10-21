@@ -1,0 +1,11 @@
+
+Import('env')
+sources = [
+  'OS_Mutex.cpp',
+  'OS_Queue.cpp',
+  'OS_Reader.cpp',
+  'OS_Task.cpp',
+  'OS_os.cpp'
+]
+
+env.lib_os = env.Library('os', Glob('*.c') + Glob('*.cpp'))
