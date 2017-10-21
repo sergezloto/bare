@@ -1,0 +1,6 @@
+Import('env')
+
+allsources = Glob('*.cpp')
+sources = allsources
+env.lib_ebml = env.Library('ebml', sources)
+
