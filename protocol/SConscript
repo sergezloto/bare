@@ -1,0 +1,4 @@
+Import('env')
+
+sources = Glob('*.c') + Glob('*.cpp')
+env.lib_protocol = env.Library('protocol', sources)
